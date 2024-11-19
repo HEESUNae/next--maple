@@ -1,0 +1,8 @@
+.basicButton {
+    background: darkorange;
+    border: 1px solid darkorange;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+}

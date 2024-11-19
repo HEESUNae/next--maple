@@ -1,0 +1,25 @@
+.dialog {
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirmModal {
+    min-width: 240px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+}
+.confirmModal button {
+    width: 100%;
+}
+.confirmModal p {
+    font-weight: 600;
+    margin: 16px 0 24px 0;
+}
