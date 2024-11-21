@@ -1,0 +1,19 @@
+.contents {
+    padding: 2rem;
+    display: flex;
+    gap: 1.6rem
+}
+.dojangContainer {
+    flex-grow: 1;
+}
+.titleWrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+.tabMenu {
+    display: flex;
+    gap: 0.8rem;
+}
+.tabMenu li {}

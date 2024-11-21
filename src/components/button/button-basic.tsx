@@ -6,10 +6,11 @@ interface ButtonProps {
     children: ReactNode;
     disabled?: boolean;
     onClick?: () => void;
+    className?: string;
 }
 
-export function Button({children, onClick, ...rest}:ButtonProps){
+export function Button({children, className, onClick, ...rest}:ButtonProps){
     return (
-        <button className={styles.basicButton} onClick={onClick}>{children}</button>
+        <button className={className || styles.basicButton} onClick={onClick}>{children}</button>
     )
 }

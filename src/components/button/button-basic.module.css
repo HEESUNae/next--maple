@@ -1,8 +1,11 @@
 .basicButton {
     background: darkorange;
-    border: 1px solid darkorange;
+    border: 0.1rem solid darkorange;
     color: #fff;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.4rem;
     font-weight: 600;
+}
+.tabBtnOn {
+    background-color: black;
 }
