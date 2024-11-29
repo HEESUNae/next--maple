@@ -46,17 +46,15 @@ export async function LevelRank() {
 
   return (
     <ul className={styles.lavelCardWrap}>
-      {addRankUserImg.map(
-        ({ ranking, world_name, character_name, character_level, character_image }: LevelRanksType) => (
-          <li key={ranking} className={styles.levelCard}>
-            <Badge>{ranking}등</Badge>
-            <Image src={character_image || '/vercel.svg'} alt={character_name} width={100} height={100} />
-            <p className="font-body-03">{world_name}</p>
-            <p className="font-header-02">{character_name}</p>
-            <p className="font-header-02-orange">Lv.{character_level}</p>
-          </li>
-        )
-      )}
+      {addRankUserImg.map((item: LevelRanksType) => (
+        <li key={item.ranking} className={styles.levelCard}>
+          <Badge>{item.ranking}등</Badge>
+          <Image src={item.character_image || '/vercel.svg'} alt={item.character_name} width={100} height={100} />
+          <p className="font-body-03">{item.world_name}</p>
+          <p className="font-header-02">{item.character_name}</p>
+          <p className="font-header-02-orange">Lv.{item.character_level}</p>
+        </li>
+      ))}
     </ul>
   );
 }
