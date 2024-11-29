@@ -26,8 +26,21 @@ button {
   cursor: pointer;
   border: 0;
 }
+section {
+  flex-grow: 1;
+}
+
 .font-header-01 {
   font-size: 1.6rem;
+  font-weight: 600;
+}
+.font-header-02 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.font-header-02-orange {
+  color: #ff8c00;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 .font-body-03 {

@@ -1,0 +1,18 @@
+.lavelCardWrap {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 100px;
+}
+.levelCard {
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  background: #fcfaf9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}

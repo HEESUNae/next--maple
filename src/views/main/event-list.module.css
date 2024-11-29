@@ -1,0 +1,13 @@
+.eventList {
+  display: grid;
+  gap: 1rem;
+}
+.eventList li {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: #eee;
+}
+.eventList a {
+  flex-grow: 2;
+}

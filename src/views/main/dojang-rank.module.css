@@ -1,0 +1,12 @@
+.rankItem {
+  display: grid;
+  gap: 0.8rem;
+}
+.rankItem li {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 0.1rem solid #eee;
+}

@@ -1,10 +1,10 @@
 'use server';
 
-import { myHeaders, TODAY } from '@/actions/action-util';
+import { TODAY, myHeaders } from './action-util';
 
-export default async function getDojangRank() {
+export default async function getLevelRank() {
   try {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ranking/dojang?date=${TODAY}&difficulty=${1}`, {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ranking/overall?date=${TODAY}`, {
       headers: myHeaders,
       next: { revalidate: 86400 },
     }).then((res) => res.json());
@@ -20,15 +20,14 @@ export default async function getDojangRank() {
     if (!data) {
       return {
         status: false,
-        error: '무릉도장 정보가 없습니다.',
+        error: '전체랭킹 정보가 없습니다.',
         data: null,
       };
     }
 
-    // 요청 성공
     return {
       status: true,
-      error: ``,
+      error: '',
       data,
     };
   } catch (e) {

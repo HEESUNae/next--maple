@@ -1,10 +1,10 @@
 'use server';
 
-import { myHeaders, TODAY } from '@/actions/action-util';
+import { myHeaders } from '@/actions/action-util';
 
-export default async function getDojangRank() {
+export default async function getEventList() {
   try {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ranking/dojang?date=${TODAY}&difficulty=${1}`, {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/notice-event`, {
       headers: myHeaders,
       next: { revalidate: 86400 },
     }).then((res) => res.json());
@@ -20,7 +20,7 @@ export default async function getDojangRank() {
     if (!data) {
       return {
         status: false,
-        error: '무릉도장 정보가 없습니다.',
+        error: '이벤트 정보가 없습니다.',
         data: null,
       };
     }
