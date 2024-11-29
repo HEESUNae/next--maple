@@ -1,4 +1,4 @@
-import { TODAY } from '@/actions/action-util';
+import { TODAY } from '@/shared/api/action-util';
 import styles from './page.module.css';
 import { SearchBar } from '@/widgets';
 import { DojangRank } from './(ui)/dojang-rank';

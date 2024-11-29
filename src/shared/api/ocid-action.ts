@@ -1,6 +1,6 @@
 'use server';
 
-import { myHeaders } from '@/actions/action-util';
+import { myHeaders } from '@/shared/api/action-util';
 
 export default async function getUserOcidAction(_: any, formData: FormData) {
   const CHARACTER_NAME = formData.get('character_name')?.toString();

@@ -1,4 +1,4 @@
-import getEventList from '@/actions/event-list-action';
+import getEventList from '@/shared/api/event-list-action';
 import Link from 'next/link';
 import styles from './event-list.module.css';
 

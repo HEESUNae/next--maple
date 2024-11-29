@@ -1,12 +1,11 @@
 .eventList {
-  display: grid;
-  gap: 1rem;
+  border: 0.1rem solid #ddd;
 }
-.eventList li {
+.eventList li:not(:last-child) {
   display: flex;
   gap: 0.8rem;
   padding: 1rem;
-  background: antiquewhite;
+  border-bottom: 0.1rem solid #ddd;
 }
 .eventList a {
   flex-grow: 2;

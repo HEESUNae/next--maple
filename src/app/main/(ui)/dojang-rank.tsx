@@ -1,4 +1,4 @@
-import getDojangRank from '@/actions/dojang-rank-action';
+import getDojangRank from '@/shared/api/dojang-rank-action';
 import styles from './dojang-rank.module.css';
 import { Badge } from '@/shared/ui/badge/badge';
 
@@ -11,30 +11,17 @@ export async function DojangRank() {
   if (!dojangRanks) return <>{error}</>;
 
   return (
-    <>
-      <ul className={styles.rankItem}>
-        {dojangRanks.map(
-          ({
-            ranking,
-            character_name,
-            world_name,
-            dojang_floor,
-            class_name,
-            sub_class_name,
-            character_level,
-          }: RankListType) => (
-            <li key={ranking}>
-              <Badge>{ranking}등</Badge>
-              <p>{dojang_floor}층</p>
-
-              <p className={styles.nickname}>{character_name}</p>
-              <p className="font-body-03">
-                {world_name} {character_level} {sub_class_name || class_name}
-              </p>
-            </li>
-          )
-        )}
-      </ul>
-    </>
+    <ul className={styles.rankItem}>
+      {dojangRanks.map((item: RankListType) => (
+        <li key={item.ranking}>
+          <Badge>{item.ranking}등</Badge>
+          <p>{item.dojang_floor}층</p>
+          <p className={styles.nickname}>{item.character_name}</p>
+          <p className="font-body-03">
+            {item.world_name} {item.character_level} {item.sub_class_name || item.class_name}
+          </p>
+        </li>
+      ))}
+    </ul>
   );
 }

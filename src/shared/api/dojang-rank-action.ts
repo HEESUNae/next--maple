@@ -1,6 +1,6 @@
 'use server';
 
-import { myHeaders, TODAY } from '@/actions/action-util';
+import { myHeaders, TODAY } from '@/shared/api/action-util';
 
 export default async function getDojangRank() {
   try {

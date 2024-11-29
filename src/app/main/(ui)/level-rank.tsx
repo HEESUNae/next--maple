@@ -1,8 +1,8 @@
-import getUserInfo from '@/actions/user-info-action';
+import getUserInfo from '@/shared/api/user-info-action';
 import styles from './level-rank.module.css';
 import Image from 'next/image';
-import getLevelRank from '@/actions/level-rank-action';
-import getUserOcidAction from '@/actions/ocid-action';
+import getLevelRank from '@/shared/api/level-rank-action';
+import getUserOcidAction from '@/shared/api/ocid-action';
 import { Badge } from '@/shared/ui/badge/badge';
 
 interface LevelRanksType {

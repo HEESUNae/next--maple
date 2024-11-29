@@ -1,6 +1,6 @@
 'use server';
 
-import { myHeaders } from '@/actions/action-util';
+import { myHeaders } from '@/shared/api/action-util';
 
 export default async function getEventList() {
   try {

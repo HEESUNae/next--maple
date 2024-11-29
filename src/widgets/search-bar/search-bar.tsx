@@ -3,7 +3,7 @@
 import { useActionState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './search-bar.module.css';
-import getUserOcidAction from '@/actions/ocid-action';
+import getUserOcidAction from '@/shared/api/ocid-action';
 import { Button, Input } from '@/shared/ui';
 import { ocidStore } from '@/store/ocid-store';
 import { confirmModalStore } from '@/store/confirm-modal-store';
