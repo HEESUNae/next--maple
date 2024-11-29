@@ -6,7 +6,7 @@
   display: flex;
   gap: 0.8rem;
   padding: 1rem;
-  background-color: #eee;
+  background: antiquewhite;
 }
 .eventList a {
   flex-grow: 2;

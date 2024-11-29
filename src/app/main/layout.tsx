@@ -1,15 +1,15 @@
-import {ReactNode} from "react";
-import {Header} from "@/views/header/header";
+import { ReactNode } from 'react';
+import { Header } from '@/widgets/header/header';
 
 interface HomeLayoutProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-export default function HomeLayout({children}:HomeLayoutProps){
-    return (
-        <>
-            <Header/>
-            {children}
-        </>
-    )
+export default function HomeLayout({ children }: HomeLayoutProps) {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }

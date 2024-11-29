@@ -3,7 +3,7 @@ import styles from './level-rank.module.css';
 import Image from 'next/image';
 import getLevelRank from '@/actions/level-rank-action';
 import getUserOcidAction from '@/actions/ocid-action';
-import { Badge } from '@/components/badge/badge';
+import { Badge } from '@/shared/ui/badge/badge';
 
 interface LevelRanksType {
   ranking: number;

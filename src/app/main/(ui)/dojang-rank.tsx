@@ -1,6 +1,6 @@
 import getDojangRank from '@/actions/dojang-rank-action';
 import styles from './dojang-rank.module.css';
-import { Badge } from '@/components/badge/badge';
+import { Badge } from '@/shared/ui/badge/badge';
 
 type RankListType = Record<string, string | number>;
 

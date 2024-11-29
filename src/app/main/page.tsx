@@ -1,14 +1,11 @@
 import { TODAY } from '@/actions/action-util';
 import styles from './page.module.css';
-import { SearchBar } from '@/views';
-import { DojangRank } from '@/views/main/dojang-rank';
-import { Tab } from '@/components/tab/tab-basic';
-import { LevelRank } from '@/views/main/level-rank';
-import EventList from '@/views/main/event-list';
+import { SearchBar } from '@/widgets';
+import { DojangRank } from './(ui)/dojang-rank';
+import { LevelRank } from './(ui)/level-rank';
+import { EventList } from './(ui)/event-list';
 
 export default function Main() {
-  const guildTabs = ['주간', '플래그', '지하수로'];
-
   return (
     <>
       <div className={styles.searchContainer}>

@@ -4,7 +4,7 @@ import styles from './event-list.module.css';
 
 type EventListType = Record<string, string | number>;
 
-export default async function EventList() {
+export async function EventList() {
   const { data: eventData, error } = await getEventList();
   const eventItems = eventData?.event_notice?.slice(0, 5);
 
