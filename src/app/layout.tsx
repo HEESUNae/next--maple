@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ModalConfirm } from '@/shared/ui';
+import { Header, Footer } from '@/widgets';
 
 export const metadata: Metadata = {
   title: 'Maple Story',
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <Header />
         {children}
         <ModalConfirm />
+        <Footer />
       </body>
     </html>
   );

@@ -1,26 +1,35 @@
 'use server';
 
-import { myHeaders } from './action-util';
+import { myHeaders } from '@/shared/api/action-util';
 
-export default async function getUserInfo(OCID: string) {
+export default async function getUpdateList() {
   try {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/character/basic?ocid=${OCID}`, {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/notice-update`, {
       headers: myHeaders,
       cache: 'force-cache',
       next: { revalidate: 86400 },
     }).then((res) => res.json());
 
-    if (!data) {
+    if (data.error) {
       return {
         status: false,
-        error: '캐릭터 정보가 없습니다.',
+        error: data.error.message,
         data: null,
       };
     }
 
+    if (!data) {
+      return {
+        status: false,
+        error: ' 정보가 없습니다.',
+        data: null,
+      };
+    }
+
+    // 요청 성공
     return {
       status: true,
-      error: '',
+      error: ``,
       data,
     };
   } catch (e) {

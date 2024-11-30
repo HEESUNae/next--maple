@@ -16,6 +16,7 @@ export default async function getUserOcidAction(_: any, formData: FormData) {
   try {
     const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/id?character_name=${CHARACTER_NAME}`, {
       headers: myHeaders,
+      cache: 'force-cache',
       next: { revalidate: 86400 },
     }).then((res) => res.json());
 

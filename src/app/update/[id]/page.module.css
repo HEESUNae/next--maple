@@ -1,0 +1,23 @@
+.content {
+  max-width: 87.6rem;
+  margin: 0 auto;
+}
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+.btnWrap {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.btnWrap button {
+  padding: 0;
+}
+.btnWrap a {
+  padding: 1.2rem 2.2rem;
+  display: block;
+}

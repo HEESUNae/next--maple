@@ -1,4 +1,4 @@
-import getDojangRank from '@/shared/api/dojang-rank-action';
+import getDojangRank from '@/action/main/dojang-rank-action';
 import styles from './dojang-rank.module.css';
 import { Badge } from '@/shared/ui/badge/badge';
 

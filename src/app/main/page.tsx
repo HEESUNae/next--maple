@@ -1,13 +1,15 @@
 import { TODAY } from '@/shared/api/action-util';
 import styles from './page.module.css';
 import { SearchBar } from '@/widgets';
-import { DojangRank } from './(ui)/dojang-rank';
-import { LevelRank } from './(ui)/level-rank';
-import { EventList } from './(ui)/event-list';
+import { DojangRank } from './dojang-rank';
+import { LevelRank } from './level-rank';
+import { EventList } from './event-list';
+import { UpdateList } from './update-list';
+import { NoticeList } from './notice-list';
 
 export default function Main() {
   return (
-    <>
+    <main>
       <div className={styles.searchContainer}>
         <SearchBar />
       </div>
@@ -32,13 +34,13 @@ export default function Main() {
           <div className={styles.titleWrap}>
             <p className="font-header-01">공지사항 목록</p>
           </div>
-          <EventList />
+          <NoticeList />
         </section>
         <section>
           <div className={styles.titleWrap}>
             <p className="font-header-01">업데이트 목록</p>
           </div>
-          <EventList />
+          <UpdateList />
         </section>
         <section>
           <div className={styles.titleWrap}>
@@ -47,6 +49,6 @@ export default function Main() {
           <EventList />
         </section>
       </div>
-    </>
+    </main>
   );
 }

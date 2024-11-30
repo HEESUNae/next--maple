@@ -1,11 +1,12 @@
 'use server';
 
-import { myHeaders } from '@/shared/api/action-util';
+import { myHeaders } from '../../shared/api/action-util';
 
-export default async function getEventList() {
+export default async function getEventDetail(notice_id: string) {
   try {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/notice-event`, {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/notice-event/detail?notice_id=${notice_id}`, {
       headers: myHeaders,
+      cache: 'force-cache',
       next: { revalidate: 86400 },
     }).then((res) => res.json());
 
@@ -20,7 +21,7 @@ export default async function getEventList() {
     if (!data) {
       return {
         status: false,
-        error: '이벤트 정보가 없습니다.',
+        error: '데이터 정보가 없습니다.',
         data: null,
       };
     }

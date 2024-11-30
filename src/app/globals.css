@@ -29,7 +29,10 @@ button {
 section {
   flex-grow: 1;
 }
-
+.font-header {
+  font-size: 2rem;
+  font-weight: 600;
+}
 .font-header-01 {
   font-size: 1.6rem;
   font-weight: 600;

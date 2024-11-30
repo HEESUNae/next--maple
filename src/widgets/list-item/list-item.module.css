@@ -1,0 +1,13 @@
+.listItem {
+  display: flex;
+  gap: 1.6rem;
+  padding: 1rem 0;
+  border-bottom: 0.1rem dotted #ddd;
+}
+.listItem:last-child {
+  border-bottom: none;
+}
+.listItem a {
+  flex-grow: 2;
+  font-weight: 600;
+}

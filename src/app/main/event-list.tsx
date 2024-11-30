@@ -1,6 +1,6 @@
-import getEventList from '@/shared/api/event-list-action';
+import getEventList from '@/action/event/event-list-action';
 import Link from 'next/link';
-import styles from './event-list.module.css';
+import { ListItem } from '@/widgets';
 
 type EventListType = Record<string, string | number>;
 
@@ -10,14 +10,14 @@ export async function EventList() {
 
   if (!eventItems) return <>{error}</>;
   return (
-    <ul className={styles.eventList}>
+    <ul>
       {eventItems.map(({ notice_id, title, date_event_start, date_event_end }: EventListType, idx: number) => (
-        <li key={notice_id}>
-          <p>{idx + 1}</p>
+        <ListItem key={notice_id}>
+          <p className="font-header-02-orange">{idx + 1}</p>
           <Link href={`/event/${notice_id}`}>{title}</Link>
           <p>{String(date_event_start).split('T')[0]}</p>
           <p>{String(date_event_end).split('T')[0]}</p>
-        </li>
+        </ListItem>
       ))}
     </ul>
   );

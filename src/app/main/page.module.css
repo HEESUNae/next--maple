@@ -1,8 +1,8 @@
 .contents {
   display: flex;
-  gap: 1.6rem;
+  gap: 3rem;
   max-width: 144rem;
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 0 2rem;
 }
 .dojangContainer {
@@ -13,10 +13,6 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-}
-.tabMenu {
-  display: flex;
-  gap: 0.8rem;
 }
 .LevelContainer {
   width: 100%;
