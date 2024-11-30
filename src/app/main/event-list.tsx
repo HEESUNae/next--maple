@@ -15,8 +15,8 @@ export async function EventList() {
         <ListItem key={notice_id}>
           <p className="font-header-02-orange">{idx + 1}</p>
           <Link href={`/event/${notice_id}`}>{title}</Link>
-          <p>{String(date_event_start).split('T')[0]}</p>
-          <p>{String(date_event_end).split('T')[0]}</p>
+          <p className="font-body-03">{String(date_event_start).split('T')[0]}</p>
+          <p className="font-body-03">{String(date_event_end).split('T')[0]}</p>
         </ListItem>
       ))}
     </ul>

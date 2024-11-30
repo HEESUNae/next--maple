@@ -14,7 +14,7 @@ export async function NoticeList() {
         <ListItem key={item.notice_id}>
           <p className="font-header-02-orange">{idx + 1}</p>
           <a href={`/notice/${item.notice_id}`}>{item.title}</a>
-          <p>{String(item.date).split('T')[0]}</p>
+          <p className="font-body-03">{String(item.date).split('T')[0]}</p>
         </ListItem>
       ))}
     </>
