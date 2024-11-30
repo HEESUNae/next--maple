@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Maple Story
 
-## Getting Started
+메이플스토리 오픈 무료 API를 활용하여 만든 토이프로젝트 입니다.  
+Next.js의 Server Action을 사용하여 작업했습니다.
 
-First, run the development server:
+### 작업내용
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[메인화면]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 무릉도장 랭킹 10위 데이터를 확인할 수 있습니다.
+- 레벨랭킹 10위 데이터와 캐릭터 이미지를 확인할 수 있습니다.
+- 공지사항, 업데이트, 진행중인 이벤트 리스트를 확인할 수 있습니다.
+- 검색창에 캐릭터 닉네임 입력시 일치하는 캐릭터 상세정보 페이지로 이동합니다.
+- 존재하지 않는 캐릭터 닉네임일때는 알림 모달 표출합니다.
 
-You can start editing the page by modifying `app/dojang-rank.tsx`. The page auto-updates as you edit the file.
+[리스트 상세]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 메인페이지에서 공지사항, 업데이트, 이벤트를 클릭시 상세페이지로 이동하며 일치하는 상세페이지 내용을 볼 수 있습니다.
+- API로 전달받은 문자열 형식의 컨텐츠를 html 로 변환하여 보여줍니다.
 
-## Learn More
+### 기술스택
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js, TypeScript, Zustand, React-html-parser
